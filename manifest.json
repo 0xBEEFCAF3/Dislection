@@ -1,0 +1,26 @@
+{
+
+      "manifest_version": 2,
+        "name": "Dislection",
+          "version": "1.0",
+
+            "description": "Add dyslexic font to any webpage",
+
+            "icons": {
+                      
+            },
+
+            "content_scripts": [
+                {
+                          "matches": ["<all_urls>"],
+                                "js": ["dislection.js"]
+                                    
+                }
+                  
+            ]
+
+            
+}
+
+
+
