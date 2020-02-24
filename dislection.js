@@ -1,20 +1,18 @@
 
 ;(() => {
-
-    const fontUrl = 'https://github.com/armins88/armins88.github.io/blob/master/assets/fonts/OpenDyslexicMono-Regular.otf?raw=true';
+    const fontUrl = browser.runtime.getURL("fonts/OpenDyslexicMono-Regular.otf");
     if ("fonts" in document) {
         const font = new FontFace(
                 "Dyslexia",
-                `url(http://localhost:8000/OpenDyslexicMono-Regular.otf) format('truetype')`
+                `url('${fontUrl}') format('truetype')`
 
         );
 
         Promise.all([
                 font.load()  //TODO add more fonts to be loaded
         ]).then(function(loadedFonts) {
-                // Render them at the same time
-                loadedFonts.forEach(function(font) {
-                       document.fonts.add(font);
+                loadedFonts.forEach( f => {
+                       document.fonts.add(f);
                     });
                 });
 

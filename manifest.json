@@ -17,6 +17,9 @@
                                     
                 }
                   
+            ],
+            "web_accessible_resources": [
+                  "fonts/OpenDyslexicMono-Regular.otf"     
             ]
 
             
